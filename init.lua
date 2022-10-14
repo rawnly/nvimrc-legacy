@@ -26,7 +26,7 @@ local config = {
   },
 
   -- Set colorscheme to use
-  colorscheme = "catppuccin",
+  colorscheme = "carbonfox",
 
   -- Add highlight groups in any theme
   highlights = {
@@ -191,6 +191,8 @@ local config = {
       ["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", desc = "Pick to close" },
       ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
       ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
+
+      ["<leader>lr"] = { "<cmd>Lspsaga rename<CR>", desc = "Rename current symbol" },
       -- quick save
       -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     },
@@ -202,42 +204,6 @@ local config = {
 
   -- Configure plugins
   plugins = {
-    init = {
-      -- You can disable default plugins as follows:
-      -- ["goolord/alpha-nvim"] = { disable = true },
-
-      {
-        "simrat39/rust-tools.nvim",
-        after = "mason-lspconfig.nvim",
-        config = function()
-          require("rust-tools").setup {
-            server = astronvim.lsp.server_settings "rust_analyzer",
-          }
-        end,
-      },
-      {
-        "jose-elias-alvarez/typescript.nvim",
-        after = "mason-lspconfig.nvim",
-        config = function()
-          require("typescript").setup {
-            -- server = astronvim.lsp.server_settings "tsserver",
-          }
-        end,
-      },
-
-      -- THEMES
-      { "rawnly/oxocarbon.nvim", run = "./install.sh" },
-      { "shaunsingh/nord.nvim" },
-      { "AlessandroYorba/Sierra" },
-      { "nikolvs/vim-sunbather" },
-      { "whatyouhide/vim-gotham" },
-      { "EdenEast/nightfox.nvim" },
-
-      -- EXTRA
-      { "yasuhiroki/github-actions-yaml.vim" },
-      { "nvim-treesitter/nvim-treesitter-context" },
-      { "wakatime/vim-wakatime" },
-    },
     -- All other entries override the require("<key>").setup({...}) call for default plugins
     ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
       -- config variable is the default configuration table for the setup functino call
@@ -266,34 +232,6 @@ local config = {
     },
   },
 
-  -- LuaSnip Options
-  luasnip = {
-    -- Add paths for including more VS Code style snippets in luasnip
-    vscode_snippet_paths = {
-      "./lua/user/snippets",
-    },
-    -- Extend filetypes
-    filetype_extend = {
-      javascript = { "javascriptreact" },
-      typescript = { "typescriptreact" },
-    },
-  },
-
-  -- CMP Source Priorities
-  -- modify here the priorities of default cmp sources
-  -- higher value == higher priority
-  -- The value can also be set to a boolean for disabling default sources:
-  -- false == disabled
-  -- true == 1000
-  cmp = {
-    source_priority = {
-      nvim_lsp = 1000,
-      luasnip = 750,
-      buffer = 500,
-      path = 250,
-    },
-  },
-
   -- Modify which-key registration (Use this with mappings table in the above.)
   ["which-key"] = {
     -- Add bindings which show up as group name
@@ -315,24 +253,24 @@ local config = {
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
     -- Show diagnostic message on hover
-    vim.api.updatetime = 250
-    vim.api.nvim_create_autocmd("CursorHold", {
-      callback = function()
-        vim.diagnostic.open_float(nil, {
-          focusable = false,
-          border = "rounded",
-          source = "always",
-          prefix = " ",
-          scope = "cursor",
-          close_events = {
-            "BufLeave",
-            "CursorMoved",
-            "InsertEnter",
-            "FocusLost",
-          },
-        })
-      end,
-    })
+    -- vim.api.updatetime = 250
+    -- vim.api.nvim_create_autocmd("CursorHold", {
+    --   callback = function()
+    --     vim.diagnostic.open_float(nil, {
+    --       focusable = false,
+    --       border = "rounded",
+    --       source = "always",
+    --       prefix = " ",
+    --       scope = "cursor",
+    --       close_events = {
+    --         "BufLeave",
+    --         "CursorMoved",
+    --         "InsertEnter",
+    --         "FocusLost",
+    --       },
+    --     })
+    --   end,
+    -- })
   end,
 }
 

@@ -60,9 +60,9 @@
     "body": [
       "import React, { forwardRef } from \"react\";",
       "",
-      "interface I${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}Props extends React.DetailedHTMLProps<React.${2/(.*)/${1:/capitalize}/}HTMLAttributes<HTML${2/(.*)/${1:/capitalize}/}Element>, HTML${2/(.*)/${1:/capitalize}/}Element> { }",
+      "interface I${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}Props extends React.${2/(.*)/${1:/capitalize}/}HTMLAttributes<HTML${2/(.*)/${1:/capitalize}/}Element> { }",
       "",
-      "const ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/} = forwardRef<HTML${2/(.*)/${1:/capitalize}/}Element, I${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}Props>((props, ref) => {",
+      "const ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}: React.FC<I${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}Props & React.RefAttributes<HTML${2/(.*)/${1:/capitalize}/}Element>> = forwardRef((props, ref) => {",
       "\t// Do your stuff here,",
       "",
       "\treturn ${0:null};",
