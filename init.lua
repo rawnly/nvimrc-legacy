@@ -26,7 +26,7 @@ local config = {
   },
 
   -- Set colorscheme to use
-  colorscheme = "carbonfox",
+  colorscheme = "iceberg",
 
   -- Add highlight groups in any theme
   highlights = {
@@ -34,7 +34,7 @@ local config = {
     --   Normal = { bg = "#000000" },
     -- }
     -- duskfox = { -- a table of overrides/changes to the duskfox theme
-    --   Normal = { bg = "#000000" },
+    --   Normal = { bg = "#ffffff" },
     -- },
   },
 
@@ -193,6 +193,9 @@ local config = {
       ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
 
       ["<leader>lr"] = { "<cmd>Lspsaga rename<CR>", desc = "Rename current symbol" },
+
+      ["<leader>ul"] = { "<cmd>Limelight!! 0.7<CR>", desc = "Toggle LimeLight" },
+      ["<leader>uz"] = { "<cmd>Goyo 80%x80%<CR>", desc = "Toggle zen mode" }
       -- quick save
       -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     },
@@ -204,6 +207,10 @@ local config = {
 
   -- Configure plugins
   plugins = {
+    ["rose-pine"] = function(config)
+      config.dark_variant = "moon"
+      return config
+    end,
     -- All other entries override the require("<key>").setup({...}) call for default plugins
     ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
       -- config variable is the default configuration table for the setup functino call

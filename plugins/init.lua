@@ -8,15 +8,7 @@ local config = {
       }
     end,
   },
-  -- {
-  --   "jose-elias-alvarez/typescript.nvim",
-  --   after = "mason-lspconfig.nvim",
-  --   config = function()
-  --     require("typescript").setup {
-  --       server = astronvim.lsp.server_settings "tsserver",
-  --     }
-  --   end,
-  -- },
+  { "Hiroya-W/sequoia-moonlight.nvim" },
   {
     "glepnir/lspsaga.nvim",
     branch = "main",
@@ -28,19 +20,26 @@ local config = {
   },
 
   -- THEMES
-  { "rawnly/oxocarbon.nvim", run = "./install.sh" },
   { "shaunsingh/nord.nvim" },
-  { "AlessandroYorba/Sierra" },
+  { "cocopon/iceberg.vim" },
+  { "projekt0n/github-nvim-theme" },
   { "nikolvs/vim-sunbather" },
-  { "whatyouhide/vim-gotham" },
   { "EdenEast/nightfox.nvim" },
+  {
+    "rose-pine/neovim",
+    as = "rose-pine",
+    config = function()
+      require("rose-pine").setup {
+        dark_variant = "moon",
+      }
+    end,
+  },
   {
     "catppuccin/nvim",
     as = "catppuccin",
     config = function()
-      vim.g.catppuccin_flavour = "macchiato"
+      vim.g.catppuccin_flavour = "mocha"
       require("catppuccin").setup {}
-      -- vim.api.nvim_command "colorscheme catppuccin"
     end,
   },
 
@@ -48,6 +47,8 @@ local config = {
   { "yasuhiroki/github-actions-yaml.vim" },
   { "nvim-treesitter/nvim-treesitter-context" },
   { "wakatime/vim-wakatime" },
+  { "junegunn/limelight.vim" },
+  { "junegunn/goyo.vim" }
 }
 
 return config
