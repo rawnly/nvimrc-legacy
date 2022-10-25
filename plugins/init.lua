@@ -48,7 +48,8 @@ local config = {
   { "nvim-treesitter/nvim-treesitter-context" },
   { "wakatime/vim-wakatime" },
   { "junegunn/limelight.vim" },
-  { "junegunn/goyo.vim" }
+  { "junegunn/goyo.vim" },
+  { "justinmk/vim-sneak" },
 }
 
 return config
