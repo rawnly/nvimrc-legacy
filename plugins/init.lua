@@ -49,7 +49,8 @@ local config = {
   { "wakatime/vim-wakatime" },
   { "junegunn/limelight.vim" },
   { "junegunn/goyo.vim" },
-  { "justinmk/vim-sneak" },
+  -- { "justinmk/vim-sneak" },
+  { "rawnly/vim-sneak" },
 }
 
 return config

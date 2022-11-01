@@ -26,7 +26,7 @@ local config = {
   },
 
   -- Set colorscheme to use
-  colorscheme = "iceberg",
+  colorscheme = "catppuccin",
 
   -- set vim options here (vim.<first_key>.<second_key> =  value)
   options = {
@@ -45,7 +45,8 @@ local config = {
       autopairs_enabled = true, -- enable autopairs at start
       diagnostics_enabled = true, -- enable diagnostics at start
       status_diagnostics_enabled = true, -- enable diagnostics in statusline
-      ["sneak#s_next"] = 1
+      ["sneak#prompt"] = "",
+      ["sneak#s_next"] = 1,
     },
   },
   -- If you need more control, you can use the function()...end notation

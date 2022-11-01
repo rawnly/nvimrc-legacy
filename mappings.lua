@@ -7,8 +7,6 @@ return {
   -- first key is the mode
   n = {
     -- second key is the lefthand side of the map
-    -- mappings seen under group name "Buffer"
-
     ["<leader>lr"] = { "<cmd>Lspsaga rename<CR>", desc = "Rename current symbol" },
 
     ["<leader>ul"] = { "<cmd>Limelight!! 0.7<CR>", desc = "Toggle LimeLight" },
