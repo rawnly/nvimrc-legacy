@@ -9,15 +9,17 @@ local config = {
     end,
   },
   { "Hiroya-W/sequoia-moonlight.nvim" },
-  {
-    "glepnir/lspsaga.nvim",
-    branch = "main",
-    config = function()
-      local saga = require "lspsaga"
-
-      saga.init_lsp_saga {}
-    end,
-  },
+  { "b0o/schemastore.nvim" },
+  { "folke/tokyonight.nvim" },
+  -- {
+  --   "glepnir/lspsaga.nvim",
+  --   branch = "main",
+  --   config = function()
+  --     local saga = require "lspsaga"
+  --
+  --     saga.init_lsp_saga {}
+  --   end,
+  -- },
 
   -- THEMES
   { "shaunsingh/nord.nvim" },
@@ -45,12 +47,11 @@ local config = {
 
   -- EXTRA
   { "yasuhiroki/github-actions-yaml.vim" },
-  { "nvim-treesitter/nvim-treesitter-context" },
   { "wakatime/vim-wakatime" },
   { "junegunn/limelight.vim" },
   { "junegunn/goyo.vim" },
-  -- { "justinmk/vim-sneak" },
-  { "rawnly/vim-sneak" },
+  { "github/copilot.vim" },
+  { "justinmk/vim-sneak" },
 }
 
 return config

@@ -7,8 +7,6 @@ return {
   -- first key is the mode
   n = {
     -- second key is the lefthand side of the map
-    ["<leader>lr"] = { "<cmd>Lspsaga rename<CR>", desc = "Rename current symbol" },
-
     ["<leader>ul"] = { "<cmd>Limelight!! 0.7<CR>", desc = "Toggle LimeLight" },
     ["<leader>uz"] = { "<cmd>Goyo 80%x80%<CR>", desc = "Toggle zen mode" },
 

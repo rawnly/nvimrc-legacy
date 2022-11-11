@@ -29,6 +29,14 @@ return {
 
   -- Add overrides for LSP server settings, the keys are the name of the server
   ["server-settings"] = {
+    jsonls = {
+      json = {
+        schemas = require("schemastore").json.schemas(),
+        validate = {
+          enable = true,
+        },
+      },
+    },
     -- example for addings schemas to yamlls
     -- yamlls = { -- override table for require("lspconfig").yamlls.setup({...})
     --   settings = {
