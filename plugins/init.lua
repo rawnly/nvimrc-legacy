@@ -8,9 +8,7 @@ local config = {
       }
     end,
   },
-  { "Hiroya-W/sequoia-moonlight.nvim" },
   { "b0o/schemastore.nvim" },
-  { "folke/tokyonight.nvim" },
   -- {
   --   "glepnir/lspsaga.nvim",
   --   branch = "main",
@@ -22,6 +20,12 @@ local config = {
   -- },
 
   -- THEMES
+  { "Hiroya-W/sequoia-moonlight.nvim" },
+  { "folke/tokyonight.nvim" },
+  {
+    "cranberry-clockworks/coal.nvim",
+    config = function() require("coal").setup() end,
+  },
   { "shaunsingh/nord.nvim" },
   { "cocopon/iceberg.vim" },
   { "projekt0n/github-nvim-theme" },
