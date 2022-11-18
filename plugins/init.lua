@@ -18,7 +18,8 @@ local config = {
   --     saga.init_lsp_saga {}
   --   end,
   -- },
-
+  { "kkharji/sqlite.lua" },
+  { "nvim-telescope/telescope-smart-history.nvim" },
   -- THEMES
   { "Hiroya-W/sequoia-moonlight.nvim" },
   { "folke/tokyonight.nvim" },

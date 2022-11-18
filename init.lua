@@ -26,7 +26,7 @@ local config = {
   },
 
   -- Set colorscheme to use
-  colorscheme = "tokyonight-night",
+  colorscheme = "duskfox",
 
   -- set vim options here (vim.<first_key>.<second_key> =  value)
   options = {
