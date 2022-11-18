@@ -12,6 +12,8 @@ return {
 
     ["f"] = { "<cmd>call sneak#wrap('', 1, 0, 1, 1)<CR>" }, -- cmd
     ["F"] = { "<cmd>call sneak#wrap('', 1, 1, 1, 1)<CR>" }, -- cmd
+
+    ["<leader><leader>"] = { "<cmd>Telescope frecency<CR>", desc = "Frecency" },
   },
   v = {
     ["f"] = { "<cmd>call sneak#wrap(visualmode(), 1, 0, 1, 1)<CR>" }, -- cmd

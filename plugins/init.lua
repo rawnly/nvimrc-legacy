@@ -19,7 +19,9 @@ local config = {
   --   end,
   -- },
   { "kkharji/sqlite.lua" },
-  { "nvim-telescope/telescope-smart-history.nvim" },
+  { "nvim-telescope/telescope-smart-history.nvim", requires = { "kkharji/sqlite.lua" } },
+  { "nvim-telescope/telescope-github.nvim" },
+  { "nvim-telescope/telescope-frecency.nvim" },
   -- THEMES
   { "Hiroya-W/sequoia-moonlight.nvim" },
   { "folke/tokyonight.nvim" },
