@@ -18,6 +18,7 @@ local config = {
   --     saga.init_lsp_saga {}
   --   end,
   -- },
+  { "srcery-colors/srcery-vim", as = "srcery" },
   { "kkharji/sqlite.lua" },
   { "nvim-telescope/telescope-smart-history.nvim", requires = { "kkharji/sqlite.lua" } },
   { "nvim-telescope/telescope-github.nvim" },
