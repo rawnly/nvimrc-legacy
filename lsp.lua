@@ -1,5 +1,8 @@
 return {
   -- enable servers that you already have installed without mason
+  skip_setup = {
+    "rust_analyzer",
+  },
   servers = {
     -- "pyright"
   },

@@ -9,20 +9,13 @@ local config = {
     end,
   },
   { "b0o/schemastore.nvim" },
-  -- {
-  --   "glepnir/lspsaga.nvim",
-  --   branch = "main",
-  --   config = function()
-  --     local saga = require "lspsaga"
-  --
-  --     saga.init_lsp_saga {}
-  --   end,
-  -- },
+  { "mvllow/modes.nvim", as = "modes", config = function() require("modes").setup() end },
   { "srcery-colors/srcery-vim", as = "srcery" },
   { "kkharji/sqlite.lua" },
   { "nvim-telescope/telescope-smart-history.nvim", requires = { "kkharji/sqlite.lua" } },
   { "nvim-telescope/telescope-github.nvim" },
   { "nvim-telescope/telescope-frecency.nvim" },
+
   -- THEMES
   { "Hiroya-W/sequoia-moonlight.nvim" },
   { "folke/tokyonight.nvim" },
@@ -36,20 +29,22 @@ local config = {
   { "nikolvs/vim-sunbather" },
   { "EdenEast/nightfox.nvim" },
   {
-    "rose-pine/neovim",
-    as = "rose-pine",
-    config = function()
-      require("rose-pine").setup {
-        dark_variant = "moon",
-      }
-    end,
-  },
-  {
     "catppuccin/nvim",
     as = "catppuccin",
     config = function()
       vim.g.catppuccin_flavour = "mocha"
       require("catppuccin").setup {}
+    end,
+  },
+  {
+    "rose-pine/neovim",
+    as = "rose-pine",
+    config = function()
+      require("rose-pine").setup {
+        dark_variant = "main",
+      }
+
+      vim.cmd "colorscheme rose-pine"
     end,
   },
 

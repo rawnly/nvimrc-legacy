@@ -14,6 +14,9 @@ return {
     ["F"] = { "<cmd>call sneak#wrap('', 1, 1, 1, 1)<CR>" }, -- cmd
 
     ["<leader><leader>"] = { "<cmd>Telescope frecency<CR>", desc = "Frecency" },
+
+    ["<leader>lR"] = { "<cmd>Telescope lsp_references<CR>", desc = "References" },
+    ["<leader>bp"] = { "<cmd>BufferlineTogglePin<CR>", desc = "Toggle pin tab" },
   },
   v = {
     ["f"] = { "<cmd>call sneak#wrap(visualmode(), 1, 0, 1, 1)<CR>" }, -- cmd
