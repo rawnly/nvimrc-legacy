@@ -1,10 +1,23 @@
 local config = {
+  { "IndianBoy42/tree-sitter-just", config = function() require("tree-sitter-just").setup() end },
+  { "neomake/neomake" },
+  { "NoahTheDuke/vim-just" },
+  { "posva/vim-vue" },
   {
     "simrat39/rust-tools.nvim",
     after = "mason-lspconfig.nvim",
     config = function()
       require("rust-tools").setup {
         server = astronvim.lsp.server_settings "rust_analyzer",
+      }
+    end,
+  },
+  {
+    "jose-elias-alvarez/typescript.nvim",
+    after = "mason-lspconfig.nvim",
+    config = function()
+      require("typescript").setup {
+        server = astronvim.lsp.server_settings "tsserver",
       }
     end,
   },
