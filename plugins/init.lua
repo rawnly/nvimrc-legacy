@@ -1,14 +1,30 @@
 local config = {
-  { "IndianBoy42/tree-sitter-just", config = function() require("tree-sitter-just").setup() end },
   { "neomake/neomake" },
   { "NoahTheDuke/vim-just" },
   { "posva/vim-vue" },
   {
+    "simrat39/inlay-hints.nvim",
+    config = function() require("inlay-hints").setup {} end,
+  },
+  {
     "simrat39/rust-tools.nvim",
     after = "mason-lspconfig.nvim",
     config = function()
+      -- local mason_registry = require "mason-registry"
+      -- local codelldb = mason_registry.get_package "codelldb"
+      -- local codelldb_path = codelldb:get_install_path()
+
+      local ext_path = vim.env.HOME .. "/.vscode/extensions/vadimcn.vscode-lldb-1.8.1/"
+      local codelldb_path = ext_path .. "adapter/codelldb"
+      local liblld_path = ext_path .. "lldb/lib/liblldb.so"
+
       require("rust-tools").setup {
         server = astronvim.lsp.server_settings "rust_analyzer",
+        tools = {
+          dap = {
+            adapter = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblld_path),
+          },
+        },
       }
     end,
   },
@@ -21,6 +37,28 @@ local config = {
       }
     end,
   },
+  {
+    "microsoft/vscode-js-debug",
+    opt = true,
+    run = "npm install --legacy-peer-deps && npm run compile",
+    config = function()
+      require("dap-vscode-js").setup {
+        adapters = { "pwa-node" },
+      }
+    end,
+  },
+  {
+    "mxsdev/nvim-dap-vscode-js",
+    after = "mason-nvim-dap.nvim",
+    config = function()
+      require("dap-vscode-js").setup {
+        debugger_cmd = { "js-debug-adapter" },
+        adapters = { "pwa-node" },
+      }
+    end,
+  },
+
+  --
   { "b0o/schemastore.nvim" },
   { "mvllow/modes.nvim", as = "modes", config = function() require("modes").setup() end },
   { "srcery-colors/srcery-vim", as = "srcery" },
@@ -44,10 +82,7 @@ local config = {
   {
     "catppuccin/nvim",
     as = "catppuccin",
-    config = function()
-      vim.g.catppuccin_flavour = "mocha"
-      require("catppuccin").setup {}
-    end,
+    config = function() require("catppuccin").setup {} end,
   },
   {
     "rose-pine/neovim",
@@ -56,8 +91,6 @@ local config = {
       require("rose-pine").setup {
         dark_variant = "main",
       }
-
-      vim.cmd "colorscheme rose-pine"
     end,
   },
 
