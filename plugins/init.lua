@@ -1,11 +1,15 @@
 local config = {
   { "neomake/neomake" },
+  -- justfile syntax and support
   { "NoahTheDuke/vim-just" },
+  -- vue
   { "posva/vim-vue" },
+  -- inlay hints
   {
     "simrat39/inlay-hints.nvim",
     config = function() require("inlay-hints").setup {} end,
   },
+  -- rust support
   {
     "simrat39/rust-tools.nvim",
     after = "mason-lspconfig.nvim",
@@ -14,6 +18,8 @@ local config = {
       -- local codelldb = mason_registry.get_package "codelldb"
       -- local codelldb_path = codelldb:get_install_path()
 
+      -- setup dap for rust
+      -- NOT WORKING...
       local ext_path = vim.env.HOME .. "/.vscode/extensions/vadimcn.vscode-lldb-1.8.1/"
       local codelldb_path = ext_path .. "adapter/codelldb"
       local liblld_path = ext_path .. "lldb/lib/liblldb.so"
@@ -28,6 +34,7 @@ local config = {
       }
     end,
   },
+  -- tsserver
   {
     "jose-elias-alvarez/typescript.nvim",
     after = "mason-lspconfig.nvim",
@@ -37,6 +44,7 @@ local config = {
       }
     end,
   },
+  -- debugger for js and ts
   {
     "microsoft/vscode-js-debug",
     opt = true,
@@ -47,6 +55,7 @@ local config = {
       }
     end,
   },
+  -- debugger for js
   {
     "mxsdev/nvim-dap-vscode-js",
     after = "mason-nvim-dap.nvim",
@@ -58,25 +67,30 @@ local config = {
     end,
   },
 
-  --
+  -- support for json schemas
   { "b0o/schemastore.nvim" },
+
+  -- highlights modes
   { "mvllow/modes.nvim", as = "modes", config = function() require("modes").setup() end },
-  { "srcery-colors/srcery-vim", as = "srcery" },
+
+  -- history in telescope
   { "kkharji/sqlite.lua" },
   { "nvim-telescope/telescope-smart-history.nvim", requires = { "kkharji/sqlite.lua" } },
+
+  -- navigate PRs and Issues
   { "nvim-telescope/telescope-github.nvim" },
+
+  -- navigate recent files
   { "nvim-telescope/telescope-frecency.nvim" },
 
   -- THEMES
-  { "Hiroya-W/sequoia-moonlight.nvim" },
+  { "srcery-colors/srcery-vim", as = "srcery" },
   { "folke/tokyonight.nvim" },
   {
     "cranberry-clockworks/coal.nvim",
     config = function() require("coal").setup() end,
   },
-  { "shaunsingh/nord.nvim" },
   { "cocopon/iceberg.vim" },
-  { "projekt0n/github-nvim-theme" },
   { "nikolvs/vim-sunbather" },
   { "EdenEast/nightfox.nvim" },
   {
@@ -95,11 +109,16 @@ local config = {
   },
 
   -- EXTRA
+  -- github actions support
   { "yasuhiroki/github-actions-yaml.vim" },
+  -- time tracking
   { "wakatime/vim-wakatime" },
+  -- focus mode
   { "junegunn/limelight.vim" },
   { "junegunn/goyo.vim" },
+  -- copilot
   { "github/copilot.vim" },
+  -- fast moves
   { "justinmk/vim-sneak" },
 }
 

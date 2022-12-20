@@ -26,7 +26,7 @@ local config = {
   },
 
   -- Set colorscheme to use
-  colorscheme = "srcery",
+  colorscheme = "carbonfox",
 
   -- set vim options here (vim.<first_key>.<second_key> =  value)
   options = {
@@ -39,6 +39,7 @@ local config = {
       wrap = false, -- sets vim.opt.wrap
     },
     g = {
+      heirline_bufferline = true,
       mapleader = " ", -- sets vim.g.mapleader
       cmp_enabled = true, -- enable completion at start
       autopairs_enabled = true, -- enable autopairs at start
