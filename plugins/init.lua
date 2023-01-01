@@ -4,6 +4,7 @@ local config = {
   { "NoahTheDuke/vim-just" },
   -- vue
   { "posva/vim-vue" },
+  { "joukevandermaas/vim-ember-hbs" },
   -- inlay hints
   {
     "simrat39/inlay-hints.nvim",
@@ -68,7 +69,7 @@ local config = {
   },
 
   -- support for json schemas
-  { "b0o/schemastore.nvim" },
+  -- { "b0o/schemastore.nvim" },
 
   -- highlights modes
   { "mvllow/modes.nvim", as = "modes", config = function() require("modes").setup() end },
@@ -86,27 +87,9 @@ local config = {
   -- THEMES
   { "srcery-colors/srcery-vim", as = "srcery" },
   { "folke/tokyonight.nvim" },
-  {
-    "cranberry-clockworks/coal.nvim",
-    config = function() require("coal").setup() end,
-  },
   { "cocopon/iceberg.vim" },
   { "nikolvs/vim-sunbather" },
   { "EdenEast/nightfox.nvim" },
-  {
-    "catppuccin/nvim",
-    as = "catppuccin",
-    config = function() require("catppuccin").setup {} end,
-  },
-  {
-    "rose-pine/neovim",
-    as = "rose-pine",
-    config = function()
-      require("rose-pine").setup {
-        dark_variant = "main",
-      }
-    end,
-  },
 
   -- EXTRA
   -- github actions support
