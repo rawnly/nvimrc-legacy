@@ -17,6 +17,9 @@ return {
 
     ["<leader>lR"] = { "<cmd>Telescope lsp_references<CR>", desc = "References" },
     ["<leader>bp"] = { "<cmd>BufferlineTogglePin<CR>", desc = "Toggle pin tab" },
+
+    -- Telescope file browser
+    ["<leader>fe"] = { "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", desc = "File Browser" },
   },
   v = {
     ["f"] = { "<cmd>call sneak#wrap(visualmode(), 1, 0, 1, 1)<CR>" }, -- cmd

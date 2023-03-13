@@ -1,10 +1,16 @@
 local config = {
   { "neomake/neomake" },
+  -- { "rawnly/scripto.nvim" },
+  { "~/Developer/neovim-plugins/scripto.nvim" },
   -- justfile syntax and support
   { "NoahTheDuke/vim-just" },
+  -- astro
+  { "wuelnerdotexe/vim-astro" },
+  { "wavded/vim-stylus" },
   -- vue
   { "posva/vim-vue" },
   { "joukevandermaas/vim-ember-hbs" },
+  { "folke/neodev.nvim" },
   -- inlay hints
   {
     "simrat39/inlay-hints.nvim",
@@ -37,6 +43,18 @@ local config = {
   },
   -- tsserver
   {
+    "marilari88/twoslash-queries.nvim",
+    after = "mason-lspconfig.nvim",
+    config = function()
+      require("lspconfig")["tsserver"].setup {
+        on_attach = function(client, bufnr)
+          require("twoslash-queries").attach(client, bufnr)
+          --
+        end,
+      }
+    end,
+  },
+  {
     "jose-elias-alvarez/typescript.nvim",
     after = "mason-lspconfig.nvim",
     config = function()
@@ -67,12 +85,19 @@ local config = {
       }
     end,
   },
+  {
+    "ziglang/zig.vim",
+  },
 
   -- support for json schemas
   -- { "b0o/schemastore.nvim" },
 
   -- highlights modes
-  { "mvllow/modes.nvim", as = "modes", config = function() require("modes").setup() end },
+  {
+    "mvllow/modes.nvim",
+    as = "modes",
+    config = function() require("modes").setup() end,
+  },
 
   -- history in telescope
   { "kkharji/sqlite.lua" },
@@ -83,8 +108,12 @@ local config = {
 
   -- navigate recent files
   { "nvim-telescope/telescope-frecency.nvim" },
+  -- file browser
+  { "nvim-telescope/telescope-file-browser.nvim" },
 
   -- THEMES
+  { "Shatur/neovim-ayu" },
+  { "jaredgorski/SpaceCamp" },
   { "srcery-colors/srcery-vim", as = "srcery" },
   { "folke/tokyonight.nvim" },
   { "cocopon/iceberg.vim" },

@@ -1,6 +1,5 @@
--- use mason-lspconfig to configure LSP installations
-local config = {
-  ensure_installed = { "tsserver", "rust_analyzer"},
+local config = { -- overrides `require("mason-lspconfig").setup(...)`
+  ensure_installed = { "tsserver", "zls", "rust_analyzer", "sumneko_lua" },
 }
 
 return config

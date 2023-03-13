@@ -33,6 +33,37 @@ return {
 
   -- Add overrides for LSP server settings, the keys are the name of the server
   ["server-settings"] = {
+    rust_analyzer = {
+      settings = {
+        ["rust-analyzer"] = {
+          cargo = { allFeatures = true },
+          -- enable clippy diagnostics
+          checkOnSave = {
+            command = "clippy",
+            extraArgs = { "--no-deps" },
+          },
+        },
+      },
+    },
+    sumneko_lua = {
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = { "vim", "astronvim" },
+          },
+          workspace = {
+            -- make the server aware of neovim runtime files
+            library = vim.api.nvim_get_runtime_file("", true),
+          },
+          hint = {
+            enable = true,
+          },
+          telemetry = {
+            enable = false,
+          },
+        },
+      },
+    },
     jsonls = {
       json = {
         schemas = require("schemastore").json.schemas(),

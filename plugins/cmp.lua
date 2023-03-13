@@ -7,7 +7,7 @@ return function(opts)
 
   -- check if copilot is enabled
   -- if not then use the default mapping
-  if vim.g.copilot_enabled then
+  if vim.g.copilot_enabled ~= nil then
     -- remove the default mapping for <Tab> and <S-Tab>
     -- so we can use C-k and C-j for selecting items
     -- and use <Tab> and <S-Tab> for completion given by Copilot
