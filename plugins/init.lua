@@ -1,7 +1,5 @@
 local config = {
   { "neomake/neomake" },
-  -- { "rawnly/scripto.nvim" },
-  { "~/Developer/neovim-plugins/scripto.nvim" },
   -- justfile syntax and support
   { "NoahTheDuke/vim-just" },
   -- astro
