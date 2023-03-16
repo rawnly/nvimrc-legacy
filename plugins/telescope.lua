@@ -6,24 +6,39 @@ return {
     { "nvim-telescope/telescope-file-browser.nvim" },
   },
   opts = function(_, opts)
-    local telescope = require "telescope"
-    local actions = require "telescope.actions"
     local fb_actions = require("telescope").extensions.file_browser.actions
 
     return require("astronvim.utils").extend_tbl(opts, {
       pickers = {
         find_files = {
-          hidden = true,
+          find_command = {
+            "rg",
+            "--files",
+            "--hidden",
+            "--glob",
+            "!**/.git/*",
+          },
         },
       },
       defaults = {
-        file_ignore_patterns = { "node_modules", ".next", ".DS_Store", ".git", "target", "dist", "build" },
+        file_ignore_patterns = {
+          "*/node_modules/*",
+          "*/.git/*",
+          "*/target/*",
+          "*/dist/*",
+          "*/build/*",
+          "*/.next/*",
+        },
+        -- file_ignore_patterns = { "node_modules", ".next", ".DS_Store", ".git", "target", "dist", "build" },
         history = {
           path = "~/.local/share/nvim/databases/telescope_history.sqlite3",
           limit = 1000,
         },
       },
       extensions = {
+        fzf = {
+          fuzzy = true,
+        },
         file_browser = {
           mappings = {
             n = {
@@ -40,7 +55,7 @@ return {
     })
   end,
   config = function(...)
-    require "plugins.configs.telescope"(...)
+    require "plugins.configs.telescope" (...)
 
     local telescope = require "telescope"
     telescope.load_extension "file_browser"
