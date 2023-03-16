@@ -58,6 +58,17 @@ return {
       }
     end,
   },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      indent = {
+        enable = true,
+        disable = {
+          "python",
+        },
+      },
+    },
+  },
   -- {
   --   "windwp/nvim-autopairs",
   --   config = function(plugin, opts)
