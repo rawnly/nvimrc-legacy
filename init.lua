@@ -17,7 +17,7 @@ return {
     },
   },
   -- Set colorscheme to use
-  colorscheme = "everforest",
+  colorscheme = "nightfox",
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   -- Configure require("lazy").setup() options
   lazy = {
