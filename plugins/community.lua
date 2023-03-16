@@ -13,6 +13,9 @@ return {
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.bash" },
 
+  -- Colors
+  { import = "astrocommunity.colorscheme.nightfox" },
+
   -- EXTRA
   { import = "astrocommunity.editing-support.neogen" },
   { import = "astrocommunity.test.neotest" },
