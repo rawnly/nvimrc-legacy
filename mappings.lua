@@ -19,11 +19,12 @@ return {
     -- quick save
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
     -- Sneak
-    ["f"] = { "<cmd>call sneak#wrap('', 1, 0, 1, 1)<CR>" }, -- cmd
-    ["F"] = { "<cmd>call sneak#wrap('', 1, 1, 1, 1)<CR>" }, -- cmd
+    -- ["f"] = { "<cmd>call sneak#wrap('', 1, 0, 1, 1)<CR>" }, -- cmd
+    -- ["F"] = { "<cmd>call sneak#wrap('', 1, 1, 1, 1)<CR>" }, -- cmd
     -- ["<leader><leader>"] = { "<cmd>Telescope frecency<CR>", desc = "Frecency" },
     ["<leader>lR"] = { "<cmd>Telescope lsp_references<CR>", desc = "References" },
     ["<leader>fe"] = { "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", desc = "File Browser" },
+    ["<leader>fl"] = { "<cmd>Telescope software-licenses find<CR>", desc = "Find licenses" },
     L = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
       desc = "Next buffer",
@@ -34,8 +35,8 @@ return {
     },
   },
   v = {
-    ["f"] = { "<cmd>call sneak#wrap(visualmode(), 1, 0, 1, 1)<CR>" }, -- cmd
-    ["F"] = { "<cmd>call sneak#wrap(visualmode(), 1, 1, 1, 1)<CR>" }, -- cmd
+    -- ["f"] = { "<cmd>call sneak#wrap(visualmode(), 1, 0, 1, 1)<CR>" }, -- cmd
+    -- ["F"] = { "<cmd>call sneak#wrap(visualmode(), 1, 1, 1, 1)<CR>" }, -- cmd
   },
   t = {
     -- setting a mapping to false will disable it

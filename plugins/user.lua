@@ -21,7 +21,18 @@ return {
   },
   "ziglang/zig.vim",
   "yasuhiroki/github-actions-yaml.vim",
-  { "justinmk/vim-sneak", lazy = false },
+  {
+    "nvim-neotest/neotest",
+    dependencies = { "marilari88/neotest-vitest" },
+    opts = function(_, opts)
+      require("astronvim.utils").extend_tbl(opts, {
+        adapters = {
+          require "neotest-vitest",
+        },
+        ft = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
+      })
+    end,
+  },
 
   {
     "edkolev/tmuxline.vim",

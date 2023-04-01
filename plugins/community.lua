@@ -7,11 +7,19 @@ return {
   -- PACK
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.tailwindcss" },
+  { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.astro" },
+  { import = "astrocommunity.pack.edgedb" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.pack.svelte" },
+  { import = "astrocommunity.pack.toml" },
+
+  { import = "astrocommunity.motion.leap-nvim" },
 
   -- Colors
   { import = "astrocommunity.colorscheme.nightfox" },

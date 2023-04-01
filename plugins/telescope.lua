@@ -3,10 +3,20 @@ return {
   dependencies = {
     { "kkharji/sqlite.lua" },
     { "nvim-telescope/telescope-smart-history.nvim", requires = { "kkharji/sqlite.lua" } },
-    { "nvim-telescope/telescope-file-browser.nvim" },
+    "nvim-telescope/telescope-file-browser.nvim",
+    "chip/telescope-software-licenses.nvim",
   },
   opts = function(_, opts)
+    local telescope = require "telescope"
+    local config = require "telescope.config"
     local fb_actions = require("telescope").extensions.file_browser.actions
+    local vimgrep_arguments = {
+      unpack(config.values.vimgrep_arguments),
+    }
+
+    table.insert(vimgrep_arguments, "--hidden")
+    table.insert(vimgrep_arguments, "--glob")
+    table.insert(vimgrep_arguments, "!**/.git/*")
 
     return require("astronvim.utils").extend_tbl(opts, {
       pickers = {
@@ -14,6 +24,9 @@ return {
           find_command = {
             "rg",
             "--files",
+            "--color=never",
+            "--smart-case",
+            "--trim",
             "--hidden",
             "--glob",
             "!**/.git/*",
@@ -21,9 +34,10 @@ return {
         },
       },
       defaults = {
+        vimgrep_arguments,
         file_ignore_patterns = {
           "*/node_modules/*",
-          "*/.git/*",
+          "**/.git/*",
           "*/target/*",
           "*/dist/*",
           "*/build/*",
@@ -59,5 +73,6 @@ return {
 
     local telescope = require "telescope"
     telescope.load_extension "file_browser"
+    telescope.load_extension "software-licenses"
   end,
 }
