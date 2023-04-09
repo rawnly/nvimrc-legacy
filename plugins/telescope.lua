@@ -4,7 +4,7 @@ return {
     { "kkharji/sqlite.lua" },
     { "nvim-telescope/telescope-smart-history.nvim", requires = { "kkharji/sqlite.lua" } },
     "nvim-telescope/telescope-file-browser.nvim",
-    "chip/telescope-software-licenses.nvim",
+    -- "chip/telescope-software-licenses.nvim",
   },
   opts = function(_, opts)
     local telescope = require "telescope"
@@ -69,10 +69,10 @@ return {
     })
   end,
   config = function(...)
-    require "plugins.configs.telescope" (...)
+    require "plugins.configs.telescope"(...)
 
     local telescope = require "telescope"
     telescope.load_extension "file_browser"
-    telescope.load_extension "software-licenses"
+    -- telescope.load_extension "software-licenses"
   end,
 }

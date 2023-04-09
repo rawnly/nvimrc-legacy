@@ -21,6 +21,7 @@ return {
   },
   "ziglang/zig.vim",
   "yasuhiroki/github-actions-yaml.vim",
+  "nvim-treesitter/nvim-treesitter-context",
   {
     "nvim-neotest/neotest",
     dependencies = { "marilari88/neotest-vitest" },

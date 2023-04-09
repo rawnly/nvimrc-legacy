@@ -21,6 +21,11 @@ return {
 
   { import = "astrocommunity.motion.leap-nvim" },
 
+  { import = "astrocommunity.editing-support.todo-comments-nvim" },
+  { import = "astrocommunity.scrolling.cinnamon-nvim" },
+  { import = "astrocommunity.scrolling.satellite-nvim" },
+  { import = "astrocommunity.diagnostics.trouble-nvim" },
+
   -- Colors
   { import = "astrocommunity.colorscheme.nightfox" },
 
