@@ -7,7 +7,6 @@ return {
   -- PACK
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.typescript" },
-  { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.astro" },
   { import = "astrocommunity.pack.edgedb" },
@@ -16,24 +15,25 @@ return {
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.pack.svelte" },
   { import = "astrocommunity.pack.toml" },
 
+  -- motion
   { import = "astrocommunity.motion.leap-nvim" },
+  { import = "astrocommunity.motion.vim-matchup" },
 
+  -- scroll
+  -- { import = "astrocommunity.scrolling.mini-animate" },
+
+  -- support
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
-  { import = "astrocommunity.scrolling.cinnamon-nvim" },
-  { import = "astrocommunity.scrolling.satellite-nvim" },
+
+  -- diagnostics
   { import = "astrocommunity.diagnostics.trouble-nvim" },
 
-  -- Colors
-  { import = "astrocommunity.colorscheme.nightfox" },
-
   -- EXTRA
-  { import = "astrocommunity.editing-support.neogen" },
-  { import = "astrocommunity.test.neotest" },
   { import = "astrocommunity.utility.neodim" },
-  { import = "astrocommunity.terminal-integration.flatten-nvim" },
   { import = "astrocommunity.syntax.hlargs-nvim" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.color.modes-nvim" },

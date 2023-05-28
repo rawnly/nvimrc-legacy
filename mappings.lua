@@ -24,6 +24,7 @@ return {
     -- ["<leader><leader>"] = { "<cmd>Telescope frecency<CR>", desc = "Frecency" },
     ["<leader>lR"] = { "<cmd>Telescope lsp_references<CR>", desc = "References" },
     ["<leader>fe"] = { "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", desc = "File Browser" },
+    ["<leader>fz"] = { "<cmd>Telescope zoxide list<CR>", desc = "Zoxide" },
     -- ["<leader>fl"] = { "<cmd>Telescope software-licenses find<CR>", desc = "Find licenses" },
     L = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,

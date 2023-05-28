@@ -4,10 +4,10 @@ return {
     { "kkharji/sqlite.lua" },
     { "nvim-telescope/telescope-smart-history.nvim", requires = { "kkharji/sqlite.lua" } },
     "nvim-telescope/telescope-file-browser.nvim",
-    -- "chip/telescope-software-licenses.nvim",
+    "nvim-lua/popup.nvim",
+    "jvgrootveld/telescope-zoxide",
   },
   opts = function(_, opts)
-    local telescope = require "telescope"
     local config = require "telescope.config"
     local fb_actions = require("telescope").extensions.file_browser.actions
     local vimgrep_arguments = {
@@ -50,6 +50,9 @@ return {
         },
       },
       extensions = {
+        zoxide = {
+          prompt_title = "[ Walking on the moon ]",
+        },
         fzf = {
           fuzzy = true,
         },
@@ -73,6 +76,7 @@ return {
 
     local telescope = require "telescope"
     telescope.load_extension "file_browser"
+    telescope.load_extension "zoxide"
     -- telescope.load_extension "software-licenses"
   end,
 }
