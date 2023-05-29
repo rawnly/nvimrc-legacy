@@ -6,7 +6,7 @@ return {
 
   -- PACK
   { import = "astrocommunity.pack.rust" },
-  { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.typescript-all-in-one" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.astro" },
   { import = "astrocommunity.pack.edgedb" },
@@ -22,9 +22,6 @@ return {
   -- motion
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.vim-matchup" },
-
-  -- scroll
-  -- { import = "astrocommunity.scrolling.mini-animate" },
 
   -- support
   { import = "astrocommunity.editing-support.todo-comments-nvim" },

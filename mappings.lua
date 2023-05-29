@@ -34,6 +34,22 @@ return {
       function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
       desc = "Previous buffer",
     },
+    ["gd"] = {
+      "<cmd>Glance definitions<CR>",
+      desc = "Glance definitions",
+    },
+    ["gr"] = {
+      "<cmd>Glance references<CR>",
+      desc = "Glance references",
+    },
+    ["gm"] = {
+      "<cmd>Glance implementations<CR>",
+      desc = "Glance implementations",
+    },
+    ["gy"] = {
+      "<cmd>Glance type_definitions<CR>",
+      desc = "Glance type_definitions",
+    },
   },
   v = {
     -- ["f"] = { "<cmd>call sneak#wrap(visualmode(), 1, 0, 1, 1)<CR>" }, -- cmd

@@ -11,7 +11,10 @@ return {
   -- },
   "fladson/vim-kitty",
   "knubie/vim-kitty-navigator",
-  "dnlhc/glance.nvim",
+  {
+    "dnlhc/glance.nvim",
+    cmd = { "Glance" },
+  },
   -- -- Replaced with mini.animate
   -- {
   --   "karb94/neoscroll.nvim",
