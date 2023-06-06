@@ -9,6 +9,7 @@ return {
   { import = "astrocommunity.pack.typescript-all-in-one" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.astro" },
+  { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.edgedb" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.lua" },

@@ -14,6 +14,17 @@ return {
   {
     "dnlhc/glance.nvim",
     cmd = { "Glance" },
+    opts = {
+      hooks = {
+        before_open = function(results, open, jump, method)
+          if #results == 1 then
+            jump(results[1])
+          else
+            open(results)
+          end
+        end,
+      },
+    },
   },
   -- -- Replaced with mini.animate
   -- {
@@ -30,10 +41,10 @@ return {
   {
     "Rawnly/gist.nvim",
     cmd = { "GistCreate", "GistCreateFromFile", "GistsList" },
-    init = function()
-      vim.g.gist_is_private = false -- All gists will be private, you won't be prompted again
-      vim.g.gist_clipboard = "+"    -- The registry to use for copying the Gist URL
-    end,
+    opts = {
+      clipboard = "+",
+      private = true,
+    },
   },
   -- `ListGists` opens the selected gif in a terminal buffer,
   -- nvim-unception uses neovim remote rpc functionality to open the gist in an actual buffer
