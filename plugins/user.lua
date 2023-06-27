@@ -10,6 +10,7 @@ return {
   --   end,
   -- },
   "fladson/vim-kitty",
+  "marilari88/twoslash-queries.nvim",
   "knubie/vim-kitty-navigator",
   {
     "dnlhc/glance.nvim",
@@ -26,26 +27,16 @@ return {
       },
     },
   },
-  -- -- Replaced with mini.animate
   -- {
-  --   "karb94/neoscroll.nvim",
-  --   opts = function()
-  --     return {
-  --       mappings = {
-  --         "<C-u>",
-  --         "<C-d>",
-  --       },
+  --   "Rawnly/gist.nvim",
+  --   cmd = { "GistCreate", "GistCreateFromFile", "GistsList" },
+  --   config = function()
+  --     require("gist").setup {
+  --       clipboard = "+",
+  --       private = false,
   --     }
   --   end,
   -- },
-  {
-    "Rawnly/gist.nvim",
-    cmd = { "GistCreate", "GistCreateFromFile", "GistsList" },
-    opts = {
-      clipboard = "+",
-      private = true,
-    },
-  },
   -- `ListGists` opens the selected gif in a terminal buffer,
   -- nvim-unception uses neovim remote rpc functionality to open the gist in an actual buffer
   -- and prevents neovim buffer inception
