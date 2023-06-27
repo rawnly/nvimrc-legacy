@@ -6,6 +6,8 @@
 return {
   -- first key is the mode
   n = {
+    ["<CR>"] = { "ciw" },
+    ["<BS>"] = { "cw" },
     ["<leader>b"] = { name = "Buffers" },
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
