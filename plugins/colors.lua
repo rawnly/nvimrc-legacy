@@ -12,6 +12,7 @@ return {
       },
     },
   },
+  "wuelnerdotexe/vim-enfocado",
   "folke/tokyonight.nvim",
   "cocopon/iceberg.vim",
   "nikolvs/vim-sunbather",

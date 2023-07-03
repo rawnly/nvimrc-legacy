@@ -13,11 +13,15 @@ return {
   "marilari88/twoslash-queries.nvim",
   "knubie/vim-kitty-navigator",
   {
+    "wakatime/vim-wakatime",
+    lazy = false,
+  },
+  {
     "dnlhc/glance.nvim",
     cmd = { "Glance" },
     opts = {
       hooks = {
-        before_open = function(results, open, jump, method)
+        before_open = function(results, open, jump, _method)
           if #results == 1 then
             jump(results[1])
           else
