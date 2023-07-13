@@ -6,7 +6,7 @@ return {
 
   -- PACK
   { import = "astrocommunity.pack.rust" },
-  { import = "astrocommunity.pack.typescript-all-in-one" },
+  { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.astro" },
   { import = "astrocommunity.pack.python" },

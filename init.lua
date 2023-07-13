@@ -17,7 +17,8 @@ return {
     },
   },
   -- Set colorscheme to use
-  colorscheme = "kanagawa",
+  colorscheme = "gruvbox-material",
+  -- colorscheme = "kanagawa",
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   -- Configure require("lazy").setup() options
   lazy = {
