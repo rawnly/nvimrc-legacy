@@ -21,9 +21,9 @@ return {
   { import = "astrocommunity.pack.toml" },
 
   -- motion
-  { import = "astrocommunity.motion.leap-nvim" },
+  -- { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.flit-nvim" },
-  { import = "astrocommunity.motion.vim-matchup" },
+  -- { import = "astrocommunity.motion.vim-matchup" },
 
   -- support
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
