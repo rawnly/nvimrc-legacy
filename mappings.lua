@@ -20,6 +20,7 @@ return {
     },
     -- quick save
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
+    ["<C-q>"] = { ":q<cr>", desc = "Quit buffer" }, -- change description but the same command
     -- Sneak
     -- ["f"] = { "<cmd>call sneak#wrap('', 1, 0, 1, 1)<CR>" }, -- cmd
     -- ["F"] = { "<cmd>call sneak#wrap('', 1, 1, 1, 1)<CR>" }, -- cmd
