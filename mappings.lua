@@ -54,12 +54,4 @@ return {
       desc = "Glance type_definitions",
     },
   },
-  v = {
-    -- ["f"] = { "<cmd>call sneak#wrap(visualmode(), 1, 0, 1, 1)<CR>" }, -- cmd
-    -- ["F"] = { "<cmd>call sneak#wrap(visualmode(), 1, 1, 1, 1)<CR>" }, -- cmd
-  },
-  t = {
-    -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
-  },
 }
