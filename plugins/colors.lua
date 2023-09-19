@@ -1,30 +1,29 @@
 return {
-  -- { "srcery-colors/srcery-vim", as = "srcery" },
-  -- "jaredgorski/SpaceCamp",
-  -- "Shatur/neovim-ayu",
   "sainnhe/everforest",
   "wuelnerdotexe/vim-enfocado",
   "folke/tokyonight.nvim",
-  -- "cocopon/iceberg.vim",
-  -- "nikolvs/vim-sunbather",
-  -- "Mofiqul/adwaita.nvim",
   "sainnhe/gruvbox-material",
-  -- {
-  --   "marko-cerovac/material.nvim",
-  --   opts = {
-  --     plugins = {
-  --       "telescope",
-  --       "dap",
-  --       "which-key",
-  --     },
-  --   },
-  -- },
-  -- {
-  --   "AlexvZyl/nordic.nvim",
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function() require("nordic").load() end,
-  -- },
+  "nyoom-engineering/oxocarbon.nvim",
+  {
+
+    "xero/miasma.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+  "mcchrish/zenbones.nvim",
+  "rktjmp/lush.nvim", -- required by zenbons
+  {
+    "olivercederborg/poimandres.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("poimandres").setup {
+        -- leave this setup function empty for default config
+        -- or refer to the configuration section
+        -- for configuration options
+      }
+    end,
+  },
   {
     "rebelot/kanagawa.nvim",
     lazy = false,
@@ -159,5 +158,27 @@ return {
     --     }
     --   end,
     -- }
+    -- { "srcery-colors/srcery-vim", as = "srcery" },
+    -- "jaredgorski/SpaceCamp",
+    -- "Shatur/neovim-ayu",
+    -- "cocopon/iceberg.vim",
+    -- "nikolvs/vim-sunbather",
+    -- "Mofiqul/adwaita.nvim",
+    -- {
+    --   "marko-cerovac/material.nvim",
+    --   opts = {
+    --     plugins = {
+    --       "telescope",
+    --       "dap",
+    --       "which-key",
+    --     },
+    --   },
+    -- },
+    -- {
+    --   "AlexvZyl/nordic.nvim",
+    --   lazy = false,
+    --   priority = 1000,
+    --   config = function() require("nordic").load() end,
+    -- },
   },
 }

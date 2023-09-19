@@ -2,9 +2,11 @@ return {
   -- zig lang
   "yasuhiroki/github-actions-yaml.vim",
   "nvim-treesitter/nvim-treesitter-context",
+
   -- kitty terminal integration
   "fladson/vim-kitty",
   "knubie/vim-kitty-navigator",
+
   {
     "junegunn/goyo.vim",
     cmd = { "Goyo" },
