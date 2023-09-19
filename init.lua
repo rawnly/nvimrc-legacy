@@ -1,5 +1,5 @@
 return {
-  colorscheme = "kanagawabones",
+  colorscheme = "kanagawa-dragon",
 
   -- Configure AstroNvim updates
   updater = {
