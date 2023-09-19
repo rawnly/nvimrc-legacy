@@ -28,6 +28,11 @@ return {
     ["<leader>lR"] = { "<cmd>Telescope lsp_references<CR>", desc = "References" },
     ["<leader>fe"] = { "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", desc = "File Browser" },
     ["<leader>fz"] = { "<cmd>Telescope zoxide list<CR>", desc = "Zoxide" },
+    ["<leader>r"] = { name = "Rust" },
+    ["<leader>rr"] = { "<cmd>RustRunnables<CR>", desc = "Runnables" },
+    ["<leader>rd"] = { "<cmd>RustDebuggables<CR>", desc = "Debuggables" },
+    ["<leader>ra"] = { "<cmd>RustCodeAction<CR>", desc = "Code Actions" },
+    ["<leader>rc"] = { "<cmd>RustOpenCargo<CR>", desc = "Open Cargo" },
     -- ["<leader>fl"] = { "<cmd>Telescope software-licenses find<CR>", desc = "Find licenses" },
     L = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
