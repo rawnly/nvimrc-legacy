@@ -1,9 +1,20 @@
 return {
+  "rileytwo/kiss",
   "sainnhe/everforest",
   "wuelnerdotexe/vim-enfocado",
   "folke/tokyonight.nvim",
   "sainnhe/gruvbox-material",
   "nyoom-engineering/oxocarbon.nvim",
+  "lunacookies/vim-substrata",
+  {
+    "ribru17/bamboo.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("bamboo").setup {}
+      require("bamboo").load()
+    end,
+  },
   {
 
     "xero/miasma.nvim",
