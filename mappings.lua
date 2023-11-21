@@ -8,32 +8,26 @@ return {
   n = {
     ["<CR>"] = { "ciw" },
     ["<BS>"] = { "cw" },
-    ["<leader>b"] = { name = "Buffers" },
-    ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
-    ["<leader>bD"] = {
-      function()
-        require("astronvim.utils.status").heirline.buffer_picker(
-          function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
-        )
-      end,
-      desc = "Pick to close",
-    },
+
+    ["<leader>uz"] = { "<cmd>ZenMode<CR>", desc = "Toggle Zen Mode" },
+    ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New Buffer" },
+
     -- quick save
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
     ["<C-q>"] = { ":q<cr>", desc = "Quit buffer" }, -- change description but the same command
-    -- Sneak
-    -- ["f"] = { "<cmd>call sneak#wrap('', 1, 0, 1, 1)<CR>" }, -- cmd
-    -- ["F"] = { "<cmd>call sneak#wrap('', 1, 1, 1, 1)<CR>" }, -- cmd
-    -- ["<leader><leader>"] = { "<cmd>Telescope frecency<CR>", desc = "Frecency" },
+
     ["<leader>lR"] = { "<cmd>Telescope lsp_references<CR>", desc = "References" },
     ["<leader>fe"] = { "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", desc = "File Browser" },
     ["<leader>fz"] = { "<cmd>Telescope zoxide list<CR>", desc = "Zoxide" },
+
+    -- Rust
     ["<leader>r"] = { name = "Rust" },
     ["<leader>rr"] = { "<cmd>RustRunnables<CR>", desc = "Runnables" },
     ["<leader>rd"] = { "<cmd>RustDebuggables<CR>", desc = "Debuggables" },
     ["<leader>ra"] = { "<cmd>RustCodeAction<CR>", desc = "Code Actions" },
     ["<leader>rc"] = { "<cmd>RustOpenCargo<CR>", desc = "Open Cargo" },
-    -- ["<leader>fl"] = { "<cmd>Telescope software-licenses find<CR>", desc = "Find licenses" },
+
+    -- Buffer Movement
     L = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
       desc = "Next buffer",
@@ -42,6 +36,8 @@ return {
       function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
       desc = "Previous buffer",
     },
+
+    -- Use Glance
     ["gd"] = {
       "<cmd>Glance definitions<CR>",
       desc = "Glance definitions",
