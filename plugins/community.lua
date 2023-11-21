@@ -17,6 +17,7 @@ return {
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.helm" },
   { import = "astrocommunity.pack.bash" },
+  -- { import = "astrocommunity.pack.swift" },
   { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.pack.svelte" },
   { import = "astrocommunity.pack.toml" },
