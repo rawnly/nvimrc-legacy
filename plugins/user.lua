@@ -2,6 +2,31 @@ return {
   -- zig lang
   "yasuhiroki/github-actions-yaml.vim",
   "nvim-treesitter/nvim-treesitter-context",
+  {
+    "wfxr/minimap.vim",
+    lazy = false,
+  },
+
+  -- zen mode
+  {
+    "folke/zen-mode.nvim",
+    lazy = false,
+    opts = {
+      window = {
+        width = 0.6,
+      },
+      plugins = {
+        tmux = {
+          enabled = true,
+        },
+        wezterm = {
+          enabled = true,
+          font = "+4",
+        },
+      },
+    },
+  },
+  "folke/twilight.nvim",
 
   -- kitty terminal integration
   "fladson/vim-kitty",
@@ -13,6 +38,14 @@ return {
   },
   ---
   "marilari88/twoslash-queries.nvim",
+  {
+    "nacro90/numb.nvim",
+    lazy = false,
+    opts = {
+      show_numbers = true,
+      show_cursorline = true,
+    },
+  },
   {
     "wakatime/vim-wakatime",
     lazy = false,
