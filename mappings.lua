@@ -12,8 +12,12 @@ return {
     ["<leader>uz"] = { "<cmd>ZenMode<CR>", desc = "Toggle Zen Mode" },
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New Buffer" },
 
+    ["<leader>o"] = {
+      "<cmd>Neotree reveal<CR>",
+    },
+
     -- quick save
-    ["<C-s>"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
+    ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<C-q>"] = { ":q<cr>", desc = "Quit buffer" }, -- change description but the same command
 
     ["<leader>lR"] = { "<cmd>Telescope lsp_references<CR>", desc = "References" },
