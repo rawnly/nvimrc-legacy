@@ -2,9 +2,11 @@ return {
   "rileytwo/kiss",
   "sainnhe/everforest",
   "wuelnerdotexe/vim-enfocado",
+  { "chriskempson/base16-vim", lazy = false },
   "folke/tokyonight.nvim",
   "sainnhe/gruvbox-material",
   "nyoom-engineering/oxocarbon.nvim",
+  "ellisonleao/gruvbox.nvim",
   "lunacookies/vim-substrata",
   {
     "ribru17/bamboo.nvim",
@@ -68,7 +70,7 @@ return {
             BufferLineSeparator = { fg = BG },
             BufferLineModified = { fg = BG },
             BufferlineBufferSelected = { fg = GRAY }, -- active tabs to gray
-            BufferlineBufferVisible = { fg = GRAY }, -- active tabs to gray
+            BufferlineBufferVisible = { fg = GRAY },  -- active tabs to gray
             BufferLineIndicatorVisible = { fg = BG },
 
             -- indentline

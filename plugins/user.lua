@@ -1,6 +1,23 @@
 return {
   -- zig lang
   "yasuhiroki/github-actions-yaml.vim",
+  "folke/neodev.nvim",
+  {
+    "rest-nvim/rest.nvim",
+    lazy = false,
+    dependencies = {
+      {
+        "nvim-lua/plenary.nvim",
+      },
+    },
+    config = function()
+      require("rest-nvim").setup {
+        highlight = {
+          enabled = true,
+        },
+      }
+    end,
+  },
   "nvim-treesitter/nvim-treesitter-context",
   {
     "wfxr/minimap.vim",
@@ -70,7 +87,7 @@ return {
     lazy = false,
     init = function() vim.g.unception_block_while_host_edits = true end,
   },
-  { "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
+  { "ellisonleao/glow.nvim", config = true, lazy = false, cmd = "Glow" },
   {
     "mvllow/modes.nvim",
     as = "modes",

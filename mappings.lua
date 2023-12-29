@@ -6,6 +6,11 @@
 return {
   -- first key is the mode
   n = {
+    ["<leader>h"] = { name = "HTTP" },
+    ["<leader>hx"] = { "<Plug>RestNvim", desc = "execute request" },
+    ["<leader>hp"] = { "<Plug>RestNvimPreview", desc = "preview request" },
+    ["<leader>he"] = { "<cmd>RestSelectEnv .env<cr>", desc = "load current dot-env" },
+
     ["<CR>"] = { "ciw" },
     ["<BS>"] = { "cw" },
 
