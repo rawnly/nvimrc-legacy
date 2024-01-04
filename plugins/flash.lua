@@ -25,7 +25,7 @@ return {
         function()
           require("flash").jump {
             search = {
-              mode = function(str) return "\\<" .. str end,
+              -- mode = function(str) return "\\<" .. str end,
             },
           }
         end,
