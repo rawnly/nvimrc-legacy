@@ -22,11 +22,10 @@ return {
     },
 
     -- quick save
-    ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<C-s>"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
     ["<C-q>"] = { ":q<cr>", desc = "Quit buffer" }, -- change description but the same command
 
     ["<leader>lR"] = { "<cmd>Telescope lsp_references<CR>", desc = "References" },
-    ["<leader>fe"] = { "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", desc = "File Browser" },
     ["<leader>fz"] = { "<cmd>Telescope zoxide list<CR>", desc = "Zoxide" },
 
     -- Rust
@@ -38,11 +37,15 @@ return {
 
     -- Buffer Movement
     L = {
-      function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+      function()
+        require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1)
+      end,
       desc = "Next buffer",
     },
     H = {
-      function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+      function()
+        require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1))
+      end,
       desc = "Previous buffer",
     },
 
