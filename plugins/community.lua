@@ -25,9 +25,7 @@ return {
   { import = "astrocommunity.pack.zig" },
 
   -- motion
-  -- { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.flit-nvim" },
-  -- { import = "astrocommunity.motion.vim-matchup" },
 
   -- support
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
@@ -36,7 +34,6 @@ return {
   { import = "astrocommunity.diagnostics.trouble-nvim" },
 
   -- EXTRA
-  { import = "astrocommunity.utility.neodim" },
   { import = "astrocommunity.syntax.hlargs-nvim" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.color.modes-nvim" },
