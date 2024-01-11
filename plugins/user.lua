@@ -1,7 +1,16 @@
 return {
   "nvim-treesitter/nvim-treesitter-context",
   "yasuhiroki/github-actions-yaml.vim",
-  "folke/neodev.nvim",
+  {
+    "stevearc/oil.nvim",
+    config = {},
+    lazy = false,
+  },
+  {
+    "mattn/webapi-vim",
+    lazy = false,
+  },
+  "antonk52/bad-practices.nvim",
   {
     "rest-nvim/rest.nvim",
     lazy = false,

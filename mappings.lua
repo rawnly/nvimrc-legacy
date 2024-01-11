@@ -6,10 +6,17 @@
 return {
   -- first key is the mode
   n = {
-    ["<leader>h"] = { name = "HTTP" },
-    ["<leader>hx"] = { "<Plug>RestNvim", desc = "execute request" },
-    ["<leader>hp"] = { "<Plug>RestNvimPreview", desc = "preview request" },
-    ["<leader>he"] = { "<cmd>RestSelectEnv .env<cr>", desc = "load current dot-env" },
+    ["-"] = {
+      "<cmd>Oil<CR>",
+      desc = "Open parent directory",
+    },
+
+    ["<leader>h"] = {
+      name = "HTTP",
+      x = { "<Plug>RestNvim", desc = "execute request" },
+      p = { "<Plug>RestNvimPreview", desc = "preview request" },
+      e = { "<cmd>RestSelectEnv .env<cr>", desc = "load current dot-env" },
+    },
 
     ["<CR>"] = { "ciw" },
     ["<BS>"] = { "cw" },
@@ -26,26 +33,25 @@ return {
     ["<C-q>"] = { ":q<cr>", desc = "Quit buffer" }, -- change description but the same command
 
     ["<leader>lR"] = { "<cmd>Telescope lsp_references<CR>", desc = "References" },
+
     ["<leader>fz"] = { "<cmd>Telescope zoxide list<CR>", desc = "Zoxide" },
 
     -- Rust
-    ["<leader>r"] = { name = "Rust" },
-    ["<leader>rr"] = { "<cmd>RustRunnables<CR>", desc = "Runnables" },
-    ["<leader>rd"] = { "<cmd>RustDebuggables<CR>", desc = "Debuggables" },
-    ["<leader>ra"] = { "<cmd>RustCodeAction<CR>", desc = "Code Actions" },
-    ["<leader>rc"] = { "<cmd>RustOpenCargo<CR>", desc = "Open Cargo" },
+    ["<leader>r"] = {
+      name = "Rust",
+      r = { "<cmd>Rustlsp runnables<CR>", desc = "Runnables" },
+      d = { "<cmd>RustDebuggables<CR>", desc = "Debuggables" },
+      a = { "<cmd>RustCodeAction<CR>", desc = "Code Actions" },
+      c = { "<cmd>RustOpenCargo<CR>", desc = "Open Cargo" },
+    },
 
     -- Buffer Movement
     L = {
-      function()
-        require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1)
-      end,
+      function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
       desc = "Next buffer",
     },
     H = {
-      function()
-        require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1))
-      end,
+      function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
       desc = "Previous buffer",
     },
 

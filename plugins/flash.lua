@@ -16,6 +16,10 @@ return {
           jump_labels = true,
           autohide = true,
         },
+        search = {
+          enabled = true,
+          mode = "fuzzy",
+        },
       },
     },
     keys = {
