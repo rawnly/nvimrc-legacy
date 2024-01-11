@@ -2,12 +2,13 @@ return {
 	"nvim-telescope/telescope.nvim",
 	dependencies = {
 		{ "kkharji/sqlite.lua" },
+		{ "nvim-telescope/telescope-live-grep-args.nvim" },
 		{ "nvim-telescope/telescope-smart-history.nvim", requires = { "kkharji/sqlite.lua" } },
 		"nvim-lua/popup.nvim",
 		"jvgrootveld/telescope-zoxide",
 	},
 	opts = function(_, opts)
-		local config = require("telescope.config")
+		local config = require "telescope.config"
 		local vimgrep_arguments = {
 			unpack(config.values.vimgrep_arguments),
 		}
@@ -57,10 +58,11 @@ return {
 		})
 	end,
 	config = function(...)
-		require("plugins.configs.telescope")(...)
+		require "plugins.configs.telescope" (...)
 
-		local telescope = require("telescope")
-		telescope.load_extension("zoxide")
+		local telescope = require "telescope"
+		telescope.load_extension "zoxide"
+		telescope.load_extension "live_grep_args"
 		-- telescope.load_extension "software-licenses"
 	end,
 }

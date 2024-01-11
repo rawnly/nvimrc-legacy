@@ -19,20 +19,12 @@ return {
     end,
   },
   {
-    "wfxr/minimap.vim",
-    lazy = false,
-  },
-  {
     "nacro90/numb.nvim",
     lazy = false,
     opts = {
       show_numbers = true,
       show_cursorline = true,
     },
-  },
-  {
-    "wakatime/vim-wakatime",
-    lazy = false,
   },
   {
     "dnlhc/glance.nvim",
