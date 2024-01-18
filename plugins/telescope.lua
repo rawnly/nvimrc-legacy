@@ -5,7 +5,6 @@ return {
     { "nvim-telescope/telescope-smart-history.nvim", requires = { "kkharji/sqlite.lua" } },
     "nvim-lua/popup.nvim",
     "jvgrootveld/telescope-zoxide",
-    "nvim-telescope/telescope-frecency.nvim",
     {
       "nvim-telescope/telescope-fzf-native.nvim",
       build = "make",
@@ -129,7 +128,6 @@ return {
     local telescope = require "telescope"
     telescope.load_extension "zoxide"
     telescope.load_extension "fzf"
-    telescope.load_extension "frecency"
     -- telescope.load_extension "software-licenses"
   end,
 }
