@@ -2,6 +2,13 @@ return {
   "nvim-treesitter/nvim-treesitter-context",
   "yasuhiroki/github-actions-yaml.vim",
   "folke/neodev.nvim",
+  "antonk52/bad-practices.nvim",
+  "shortcuts/no-neck-pain.nvim",
+  {
+    "stevearc/oil.nvim",
+    config = {},
+    lazy = false,
+  },
   {
     "rest-nvim/rest.nvim",
     lazy = false,

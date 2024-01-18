@@ -6,6 +6,11 @@
 return {
   -- first key is the mode
   n = {
+    ["-"] = {
+      "<cmd>Oil<CR>",
+      desc = "Open parent directory",
+    },
+
     ["<leader>h"] = { name = "HTTP" },
     ["<leader>hx"] = { "<Plug>RestNvim", desc = "execute request" },
     ["<leader>hp"] = { "<Plug>RestNvimPreview", desc = "preview request" },
@@ -37,15 +42,11 @@ return {
 
     -- Buffer Movement
     L = {
-      function()
-        require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1)
-      end,
+      function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
       desc = "Next buffer",
     },
     H = {
-      function()
-        require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1))
-      end,
+      function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
       desc = "Previous buffer",
     },
 
