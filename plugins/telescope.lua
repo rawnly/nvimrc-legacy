@@ -5,7 +5,6 @@ return {
     { "nvim-telescope/telescope-smart-history.nvim", requires = { "kkharji/sqlite.lua" } },
     "nvim-lua/popup.nvim",
     "jvgrootveld/telescope-zoxide",
-    "nvim-telescope/telescope-frecency.nvim",
     {
       "nvim-telescope/telescope-fzf-native.nvim",
       build = "make",
@@ -99,18 +98,18 @@ return {
         },
       },
       extensions = {
-        frecency = {
-          default_workspace = "CWD",
-          show_scores = true,
-          disable_devicons = false,
-          ignore_patterns = {
-            "*.git/*",
-            "*/tmp/*",
-            "*/lua-language-server/*",
-            "*/node_modules/*",
-            "*/target/*",
-          },
-        },
+        -- frecency = {
+        --   default_workspace = "CWD",
+        --   show_scores = true,
+        --   disable_devicons = false,
+        --   ignore_patterns = {
+        --     "*.git/*",
+        --     "*/tmp/*",
+        --     "*/lua-language-server/*",
+        --     "*/node_modules/*",
+        --     "*/target/*",
+        --   },
+        -- },
         zoxide = {
           prompt_title = "[ Walking on the moon ]",
         },
@@ -129,7 +128,5 @@ return {
     local telescope = require "telescope"
     telescope.load_extension "zoxide"
     telescope.load_extension "fzf"
-    telescope.load_extension "frecency"
-    -- telescope.load_extension "software-licenses"
   end,
 }

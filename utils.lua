@@ -26,4 +26,11 @@ function M.copy_git_url()
   end
 end
 
+function M.is_work_profile()
+  local user = vim.fn.system "echo -n $USER"
+  local work_user = "federico.vitale"
+
+  return vim.fn.match(user, work_user)
+end
+
 return M

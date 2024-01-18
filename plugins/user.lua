@@ -1,6 +1,7 @@
 return {
   "nvim-treesitter/nvim-treesitter-context",
   "yasuhiroki/github-actions-yaml.vim",
+  { "shortcuts/no-neck-pain.nvim", lazy = false },
   {
     "stevearc/oil.nvim",
     config = {},
