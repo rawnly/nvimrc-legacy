@@ -5,6 +5,32 @@ return {
   "antonk52/bad-practices.nvim",
   "shortcuts/no-neck-pain.nvim",
   {
+    "simonmclean/triptych.nvim",
+    event = "VeryLazy",
+    dev = true,
+    dir = "~/Developer/triptych.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim", -- required
+      "nvim-tree/nvim-web-devicons", -- optional
+    },
+    opts = {
+      mappings = {
+        quit = "<esc>",
+      },
+    },
+  },
+  {
+    "rawnly/profiles.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      return {
+        global_path = "~",
+        profile_file = ".nvim-profile.json",
+      }
+    end,
+  },
+  {
     "stevearc/oil.nvim",
     config = {},
     lazy = false,

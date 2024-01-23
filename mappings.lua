@@ -11,6 +11,10 @@ return {
       desc = "Open parent directory",
     },
 
+    ["<S-tab>"] = { "<cmd>Triptych<CR>", desc = "folder explorer" },
+    ["<C-[>"] = { "<Plug>(Marks-prev)" },
+    ["<C-]>"] = { "<Plug>(Marks-next)" },
+
     ["<leader>h"] = { name = "HTTP" },
     ["<leader>hx"] = { "<Plug>RestNvim", desc = "execute request" },
     ["<leader>hp"] = { "<Plug>RestNvimPreview", desc = "preview request" },

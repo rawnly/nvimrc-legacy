@@ -11,6 +11,7 @@ return {
   { import = "astrocommunity.pack.json" },
   --
   { import = "astrocommunity.test.neotest" },
+  { import = "astrocommunity.git.neogit" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.motion.flit-nvim" },
   { import = "astrocommunity.motion.marks-nvim" },
