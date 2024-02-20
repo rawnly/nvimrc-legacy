@@ -1,9 +1,9 @@
 return {
   "nvim-treesitter/nvim-treesitter-context",
-  "yasuhiroki/github-actions-yaml.vim",
   "folke/neodev.nvim",
   "antonk52/bad-practices.nvim",
   "shortcuts/no-neck-pain.nvim",
+  "jeffkreeftmeijer/vim-numbertoggle",
   {
     "simonmclean/triptych.nvim",
     event = "VeryLazy",
@@ -27,27 +27,6 @@ return {
       return {
         global_path = "~",
         profile_file = ".nvim-profile.json",
-      }
-    end,
-  },
-  {
-    "stevearc/oil.nvim",
-    config = {},
-    lazy = false,
-  },
-  {
-    "rest-nvim/rest.nvim",
-    lazy = false,
-    dependencies = {
-      {
-        "nvim-lua/plenary.nvim",
-      },
-    },
-    config = function()
-      require("rest-nvim").setup {
-        highlight = {
-          enabled = true,
-        },
       }
     end,
   },
