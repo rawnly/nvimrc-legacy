@@ -64,9 +64,11 @@ return {
         if copilot.is_visible() then copilot.next() end
       end)
 
+      -- opts.mapping["<C-Space>"] = cmp.mapping(function() end)
+
       opts.sources = {
-        { name = "copilot", group_index = 2 },
-        --
+        -- { name = "copilot", group_index = 2 },
+
         { name = "path", group_index = 2 },
         { name = "nvim_lsp", group_index = 2 },
         { name = "luasnip", group_index = 2 },

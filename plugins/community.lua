@@ -17,6 +17,7 @@ return {
   --
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.motion.flit-nvim" },
+  { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.color.modes-nvim" },
   { import = "astrocommunity.syntax.hlargs-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },

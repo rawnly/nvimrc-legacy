@@ -3,21 +3,10 @@
 -- Please use this mappings table to set keyboard mapping since this is the
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
+
 return {
   -- first key is the mode
   n = {
-    ["-"] = {
-      "<cmd>Oil<CR>",
-      desc = "Open parent directory",
-    },
-
-    ["<leader>h"] = {
-      name = "HTTP",
-      x = { "<Plug>RestNvim", desc = "execute request" },
-      p = { "<Plug>RestNvimPreview", desc = "preview request" },
-      e = { "<cmd>RestSelectEnv .env<cr>", desc = "load current dot-env" },
-    },
-
     ["<CR>"] = { "ciw" },
     ["<BS>"] = { "cw" },
 

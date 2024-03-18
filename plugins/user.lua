@@ -1,30 +1,21 @@
 return {
   "nvim-treesitter/nvim-treesitter-context",
   "yasuhiroki/github-actions-yaml.vim",
+  "antonk52/bad-practices.nvim",
+  -- GLEAM
+  "gleam-lang/gleam.vim",
+  -- /GLEAM
+
   { "shortcuts/no-neck-pain.nvim", lazy = false },
   {
-    "stevearc/oil.nvim",
-    config = {},
+    "rawnly/profiles.nvim",
+    dev = true,
     lazy = false,
-  },
-  {
-    "mattn/webapi-vim",
-    lazy = false,
-  },
-  "antonk52/bad-practices.nvim",
-  {
-    "rest-nvim/rest.nvim",
-    lazy = false,
-    dependencies = {
-      {
-        "nvim-lua/plenary.nvim",
-      },
-    },
+    priority = 9000,
     config = function()
-      require("rest-nvim").setup {
-        highlight = {
-          enabled = true,
-        },
+      require("profiles").setup {
+        global_path = "~",
+        filename = ".profile",
       }
     end,
   },
@@ -73,5 +64,28 @@ return {
         line_opacity = 0.25,
       }
     end,
+  },
+  {
+    "rainbowhxch/accelerated-jk.nvim",
+  },
+  {
+    "chrisgrieser/nvim-spider",
+    keys = {
+      { -- example for lazy-loading on keystroke
+        "e",
+        "<cmd>lua require('spider').motion('e')<CR>",
+        mode = { "n", "o", "x" },
+      },
+      { -- example using an explicit function
+        "w",
+        "<cmd>lua require('spider').motion('w')<CR>",
+        mode = { "n", "o", "x" },
+      },
+      { -- example using an explicit function
+        "b",
+        "<cmd>lua require('spider').motion('b')<CR>",
+        mode = { "n", "o", "x" },
+      },
+    },
   },
 }

@@ -1,7 +1,7 @@
 return {
   {
     "mrcjkb/rustaceanvim",
-    version = "^3", -- Recommended
+    version = "^4", -- Recommended
     ft = { "rust" },
   },
   -- crates
@@ -30,7 +30,7 @@ return {
       -- If true, will automatically create commands for each LSP method
       create_commands = true, -- bool
       -- Handler for URL's (used for opening documentation)
-      url_handler = "xdg-open", -- string | function(string)
+      url_handler = "open", -- string | function(string)
     },
   },
 }

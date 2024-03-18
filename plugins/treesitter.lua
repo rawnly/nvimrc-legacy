@@ -12,6 +12,7 @@ return {
       "javascript",
       "go",
       "zig",
+      "gleam",
     },
     swap = {
       enabled = true,
