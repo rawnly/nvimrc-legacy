@@ -6,11 +6,6 @@
 return {
   -- first key is the mode
   n = {
-    ["-"] = {
-      "<cmd>Oil<CR>",
-      desc = "Open parent directory",
-    },
-
     ["<S-tab>"] = { "<cmd>Triptych<CR>", desc = "folder explorer" },
     ["<C-[>"] = { "<Plug>(Marks-prev)" },
     ["<C-]>"] = { "<Plug>(Marks-next)" },
