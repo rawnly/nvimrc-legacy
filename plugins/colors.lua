@@ -7,7 +7,6 @@ return {
   "sainnhe/gruvbox-material",
   "nyoom-engineering/oxocarbon.nvim",
   "ellisonleao/gruvbox.nvim",
-  "lunacookies/vim-substrata",
   {
     "ribru17/bamboo.nvim",
     lazy = false,
@@ -23,7 +22,10 @@ return {
     lazy = false,
     priority = 1000,
   },
-  "mcchrish/zenbones.nvim",
+  {
+    "mcchrish/zenbones.nvim",
+    lazy = false,
+  },
   "rktjmp/lush.nvim", -- required by zenbons
   {
     "olivercederborg/poimandres.nvim",
@@ -70,7 +72,7 @@ return {
             BufferLineSeparator = { fg = BG },
             BufferLineModified = { fg = BG },
             BufferlineBufferSelected = { fg = GRAY }, -- active tabs to gray
-            BufferlineBufferVisible = { fg = GRAY },  -- active tabs to gray
+            BufferlineBufferVisible = { fg = GRAY }, -- active tabs to gray
             BufferLineIndicatorVisible = { fg = BG },
 
             -- indentline

@@ -1,1 +1,1 @@
-return "gruvbox-material"
+return "tokyonight-night"
